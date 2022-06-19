@@ -29,7 +29,6 @@ app.get("/api/whoami", function (req, res) {
   var ip = req.headers['x-forwarded-for'] ||
     req.socket.remoteAddress
 
-  console.log(ip);
   var info = {
     'ipaddress': ip,
     'language': req.headers["accept-language"].split(',')[0],
